@@ -1,0 +1,14 @@
+# Dependencies
+node_modules
+
+# Build
+lib
+
+# Output
+reports
+
+# Environment
+.env
+
+# OS
+.DS_Store
