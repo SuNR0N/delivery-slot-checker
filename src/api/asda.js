@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 
 import { WEEK_IN_MS, toISOString } from '../utils/date';
+import { ASDA_ACCOUNT_ID, POST_CODE } from '../config';
 
 const URL = 'https://groceries.asda.com/api/v3/slot/view';
 
@@ -13,10 +14,10 @@ const getSlots = async (fromDate, toDate) => {
             start_date: fromDate,
             end_date: toDate,
             service_address: {
-                postcode: 'E140NH',
+                postcode: POST_CODE,
             },
             customer_info: {
-                account_id: '8153492027',
+                account_id: ASDA_ACCOUNT_ID,
             },
             order_info: {
                 order_id: '20852623044',

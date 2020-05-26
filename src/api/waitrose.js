@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-import { WAITROSE_USERNAME, WAITROSE_PASSWORD } from '../config';
+import { WAITROSE_USERNAME, WAITROSE_PASSWORD, WAITROSE_ADDRESS_ID } from '../config';
 import { WEEK_IN_MS, toDateString } from '../utils/date';
 
 const URL = 'https://www.waitrose.com/api/graphql-prod/graph/live';
@@ -59,7 +59,7 @@ const getSlots = async (token, fromDate) => {
                 branchId: '753',
                 slotType: 'DELIVERY',
                 customerOrderId: '103580862',
-                addressId: '23720016',
+                addressId: WAITROSE_ADDRESS_ID,
                 fromDate,
                 size: 7,
             },
